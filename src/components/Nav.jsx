@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { AiFillFastBackward } from 'react-icons/ai'
 import { FaArrowCircleLeft, FaBackspace, FaBackward, FaBars, FaKey } from 'react-icons/fa'
 import { Link } from 'react-router'
+import { AllPaths } from './Path'
 
 
 const style = {
@@ -12,7 +13,15 @@ const style = {
 
 
 
-const links = [  "Home", "Services", "Product", " Help Center" ,"FAQs" , "Explore" ]
+const links = [
+     {Name: "Home" , path:  AllPaths.home, }, 
+     {Name : "Services", path: AllPaths.services}, 
+     {Name: "Products" , path: AllPaths.Products}, 
+     {Name: "Help Center", path: AllPaths.Help_Center}, 
+     {Name: "FAQS", path: AllPaths.FAQs}, 
+     {Name: "Explore", path: AllPaths.Explore},  
+]
+  
 
 const Nav = () => {
   const [IsmenuOpen, setIsMenuOpen] = useState(false)
@@ -27,8 +36,8 @@ const Nav = () => {
   <ul className='hidden md:flex gap-4 lg:gap-8 text-white text-sm lg:text-md flex-1 justify-center flex-wrap'> 
   
 
-  {links.map((link) => (
- <li key={link} className={style.li}> {link}   </li>
+  {links.map((link,  id) => (
+ <Link key={id} className={style.li} to={link.path}> {link.Name }   </Link>
 
   ))}
 </ul> 
@@ -60,9 +69,9 @@ onClick={()=> setIsMenuOpen(!IsmenuOpen)}>
 
 <ul className='flex flex-col gap-4  tetx-white text-md'>
 
-{links.map((i) => (
+{links.map((link, index) => (
 
-  <li key={i} className={style.li}> {i} </li>
+  <Link key={index} className={style.li} to={link.path}> {link.Name} </Link>
 ))}
 
 </ul>

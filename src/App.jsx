@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router'
 import Home from './components/Home'
 import { AllPaths } from './components/Path'
 import Services from './components/Services'
+import Products from './components/Products'
  
  
  
@@ -17,6 +18,7 @@ import Services from './components/Services'
 <Route element={<LogInPage/>} path="/" /> 
 <Route element={<Home/>} path={AllPaths.home}/> 
 <Route element={<Services/>} path={AllPaths.services}/>
+<Route element={<Products/>} path={AllPaths.Products}/> 
  </Routes>
  
 

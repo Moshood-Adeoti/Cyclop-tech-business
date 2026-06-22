@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { AiFillFastBackward } from 'react-icons/ai'
 import { FaArrowCircleLeft, FaBackspace, FaBackward, FaBars, FaKey } from 'react-icons/fa'
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import { AllPaths } from './Path'
 
 
@@ -25,6 +25,7 @@ const links = [
 
 const Nav = () => {
   const [IsmenuOpen, setIsMenuOpen] = useState(false)
+  const navigate = useNavigate()
   return (
     <div> 
 
@@ -43,8 +44,14 @@ const Nav = () => {
 </ul> 
 
 
-<Link to={"/"} 
-className='text-center animate-pulse py-2 bg-gradient-to-b from-red-300 via-purple-500 to-red-500 px-3  mr-12   rounded-lg  flex gap-2 text-white text-md   justify-center items-center font-semibold  '> <FaArrowCircleLeft className='text-white text-3xl mr-4  '/> <p> Log Out</p> </Link>
+<button to={"/"} onClick={() => {
+    const confirmed = window.confirm("Are you sure you want to log out?")
+    if (confirmed) {
+      
+      window.location.href = "/"
+    }
+  }}
+className='text-center animate-pulse py-2 bg-gradient-to-b from-red-300 via-purple-500 to-red-500 px-3  mr-12   rounded-lg  flex gap-2 text-white text-md   justify-center items-center font-semibold  '> <FaArrowCircleLeft className='text-white text-3xl mr-4  '/> <p> Log Out</p> </button>
  
  <button 
 

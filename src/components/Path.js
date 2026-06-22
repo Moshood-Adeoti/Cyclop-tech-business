@@ -10,3 +10,7 @@ export const AllPaths =  {
                         FAQs: "?faqs" , 
                         Explore: "/explore"
     }           
+
+
+    
+

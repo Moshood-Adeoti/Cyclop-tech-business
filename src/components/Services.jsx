@@ -1,6 +1,7 @@
 import React from 'react'
 import Nav from './Nav'
 import { FaChartBar, FaCloud, FaCode, FaDatabase, FaLock, FaMobile, FaRegCheckCircle } from 'react-icons/fa'
+import Footer from './Footer'
 
 
 const iconStyle = "text-5xl text-red-400 hover:text-white "
@@ -102,6 +103,8 @@ Solutions that drive <span className='animate-pulse bg-gradient-to-r from-purple
 
 
 </div>
+
+<Footer/>
  
     </div>
   )

@@ -7,7 +7,7 @@ export const AllPaths =  {
                         services: "/services",
                         Products: "/products", 
                         Help_Center  : "/help_center" , 
-                        FAQs: "?faqs" , 
+                        FAQs: "/faqs" , 
                         Explore: "/explore"
     }           
 

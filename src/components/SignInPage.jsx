@@ -31,7 +31,7 @@ const SignInPage = ({onSwitch}) => {
 
 <div className='flex flex-col gap-2 '>
 
-  <label className='mx-3.5  font-semibold bg-gradient-to-r from-purple-500 via-red-500 to-purple-400 bg-clip-text text-transparent text-[16px]'> Password </label>
+  <label className='mx-3.5  font-semibold bnpm run devg-gradient-to-r from-purple-500 via-red-500 to-purple-400 bg-clip-text text-transparent text-[16px]'> Password </label>
    
 <input type="password" placeholder="Enter your password " required  className={ Style.input} />
 </div>
